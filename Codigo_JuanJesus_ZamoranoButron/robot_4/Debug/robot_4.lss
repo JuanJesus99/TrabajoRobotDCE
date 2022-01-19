@@ -1,0 +1,1798 @@
+
+robot_4.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000008  00800100  00000824  000008b8  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000824  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000003  00800108  00800108  000008c0  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000008c0  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000008f0  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000150  00000000  00000000  00000930  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00002602  00000000  00000000  00000a80  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000fd2  00000000  00000000  00003082  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000015f8  00000000  00000000  00004054  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000003b4  00000000  00000000  0000564c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000a99  00000000  00000000  00005a00  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00002359  00000000  00000000  00006499  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000001d8  00000000  00000000  000087f2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 b0 00 	jmp	0x160	; 0x160 <__ctors_end>
+   4:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+   8:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+   c:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  10:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  14:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  18:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  1c:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  20:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  24:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  28:	0c 94 23 02 	jmp	0x446	; 0x446 <__vector_10>
+  2c:	0c 94 61 02 	jmp	0x4c2	; 0x4c2 <__vector_11>
+  30:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  34:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  38:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  3c:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  40:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  44:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  48:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  4c:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  50:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  54:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  58:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  5c:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  60:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  64:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  68:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  6c:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  70:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  74:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  78:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  7c:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  80:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  84:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  88:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  8c:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  90:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  94:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  98:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  9c:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  a0:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  a4:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+  a8:	0c 94 cd 00 	jmp	0x19a	; 0x19a <__bad_interrupt>
+
+000000ac <__trampolines_end>:
+  ac:	00 01       	movw	r0, r0
+  ae:	00 00       	nop
+  b0:	43 01       	movw	r8, r6
+  b2:	12 00       	.word	0x0012	; ????
+  b4:	02 00       	.word	0x0002	; ????
+  b6:	00 00       	nop
+  b8:	01 43       	sbci	r16, 0x31	; 49
+  ba:	00 03       	mulsu	r16, r16
+  bc:	00 00       	nop
+  be:	fc 00       	.word	0x00fc	; ????
+  c0:	04 01       	movw	r0, r8
+  c2:	03 09       	sbc	r16, r3
+  c4:	04 e8       	ldi	r16, 0x84	; 132
+  c6:	00 12       	cpse	r0, r16
+  c8:	02 03       	mulsu	r16, r18
+  ca:	09 04       	cpc	r0, r9
+  cc:	e0 00       	.word	0x00e0	; ????
+  ce:	06 03       	mulsu	r16, r22
+  d0:	03 09       	sbc	r16, r3
+  d2:	04 d6       	rcall	.+3080   	; 0xcdc <__stack+0x1dd>
+  d4:	00 08       	sbc	r0, r0
+
+000000d6 <string3>:
+  d6:	08 03 34 00 31 00 30 00 00 00                       ..4.1.0...
+
+000000e0 <string2>:
+  e0:	06 03 4d 00 32 00 00 00                             ..M.2...
+
+000000e8 <string1>:
+  e8:	12 03 4a 00 2e 00 20 00 46 00 69 00 65 00 6e 00     ..J... .F.i.e.n.
+  f8:	65 00 00 00                                         e...
+
+000000fc <string0>:
+  fc:	04 03 09 04                                         ....
+
+00000100 <config1_descriptor>:
+ 100:	09 02 43 00 02 01 00 c0 32 09 04 00 00 01 02 02     ..C.....2.......
+ 110:	01 00 05 24 00 10 01 05 24 01 01 01 04 24 02 06     ...$....$....$..
+ 120:	05 24 06 00 01 07 05 82 03 10 00 40 09 04 01 00     .$.........@....
+ 130:	02 0a 00 00 00 07 05 03 02 40 00 00 07 05 84 02     .........@......
+ 140:	40 00 00                                            @..
+
+00000143 <device_descriptor>:
+ 143:	12 01 00 02 02 00 00 10 c0 16 7a 04 00 01 01 02     ..........z.....
+ 153:	03 01                                               ..
+
+00000155 <endpoint_config_table>:
+ 155:	00 01 c1 12 01 80 36 01 81 36 00                    ......6..6.
+
+00000160 <__ctors_end>:
+ 160:	11 24       	eor	r1, r1
+ 162:	1f be       	out	0x3f, r1	; 63
+ 164:	cf ef       	ldi	r28, 0xFF	; 255
+ 166:	da e0       	ldi	r29, 0x0A	; 10
+ 168:	de bf       	out	0x3e, r29	; 62
+ 16a:	cd bf       	out	0x3d, r28	; 61
+
+0000016c <__do_copy_data>:
+ 16c:	11 e0       	ldi	r17, 0x01	; 1
+ 16e:	a0 e0       	ldi	r26, 0x00	; 0
+ 170:	b1 e0       	ldi	r27, 0x01	; 1
+ 172:	e4 e2       	ldi	r30, 0x24	; 36
+ 174:	f8 e0       	ldi	r31, 0x08	; 8
+ 176:	02 c0       	rjmp	.+4      	; 0x17c <__do_copy_data+0x10>
+ 178:	05 90       	lpm	r0, Z+
+ 17a:	0d 92       	st	X+, r0
+ 17c:	a8 30       	cpi	r26, 0x08	; 8
+ 17e:	b1 07       	cpc	r27, r17
+ 180:	d9 f7       	brne	.-10     	; 0x178 <__do_copy_data+0xc>
+
+00000182 <__do_clear_bss>:
+ 182:	21 e0       	ldi	r18, 0x01	; 1
+ 184:	a8 e0       	ldi	r26, 0x08	; 8
+ 186:	b1 e0       	ldi	r27, 0x01	; 1
+ 188:	01 c0       	rjmp	.+2      	; 0x18c <.do_clear_bss_start>
+
+0000018a <.do_clear_bss_loop>:
+ 18a:	1d 92       	st	X+, r1
+
+0000018c <.do_clear_bss_start>:
+ 18c:	ab 30       	cpi	r26, 0x0B	; 11
+ 18e:	b2 07       	cpc	r27, r18
+ 190:	e1 f7       	brne	.-8      	; 0x18a <.do_clear_bss_loop>
+ 192:	0e 94 1b 01 	call	0x236	; 0x236 <main>
+ 196:	0c 94 10 04 	jmp	0x820	; 0x820 <_exit>
+
+0000019a <__bad_interrupt>:
+ 19a:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000019e <initADC>:
+
+#include "ADC.h"
+
+void initADC()
+{
+	ADMUX = 0x00;
+ 19e:	ac e7       	ldi	r26, 0x7C	; 124
+ 1a0:	b0 e0       	ldi	r27, 0x00	; 0
+ 1a2:	1c 92       	st	X, r1
+	ADCSRA= 0x00;
+ 1a4:	ea e7       	ldi	r30, 0x7A	; 122
+ 1a6:	f0 e0       	ldi	r31, 0x00	; 0
+ 1a8:	10 82       	st	Z, r1
+	
+	ADMUX |= (1<<REFS0);
+ 1aa:	8c 91       	ld	r24, X
+ 1ac:	80 64       	ori	r24, 0x40	; 64
+ 1ae:	8c 93       	st	X, r24
+	ADCSRA |= (1<<ADEN) | (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0);
+ 1b0:	80 81       	ld	r24, Z
+ 1b2:	87 68       	ori	r24, 0x87	; 135
+ 1b4:	80 83       	st	Z, r24
+ 1b6:	08 95       	ret
+
+000001b8 <func_ADC>:
+
+uint16_t func_ADC(uint8_t ADC_channel)
+{
+	uint16_t ADC_accum=0;
+	//----- Delete a previous setup ------
+	ADMUX=0x00;
+ 1b8:	ac e7       	ldi	r26, 0x7C	; 124
+ 1ba:	b0 e0       	ldi	r27, 0x00	; 0
+ 1bc:	1c 92       	st	X, r1
+	ADCSRA=0x00;
+ 1be:	ea e7       	ldi	r30, 0x7A	; 122
+ 1c0:	f0 e0       	ldi	r31, 0x00	; 0
+ 1c2:	10 82       	st	Z, r1
+	//----- Initialize the ADC -----------
+	ADMUX |= (ADC_channel << MUX0);		// Channel is selected
+ 1c4:	9c 91       	ld	r25, X
+ 1c6:	89 2b       	or	r24, r25
+ 1c8:	8c 93       	st	X, r24
+	ADMUX |= (1 << REFS0);				//
+ 1ca:	8c 91       	ld	r24, X
+ 1cc:	80 64       	ori	r24, 0x40	; 64
+ 1ce:	8c 93       	st	X, r24
+	ADCSRA |= (7 << ADPS0);				// Set pre-scaler
+ 1d0:	80 81       	ld	r24, Z
+ 1d2:	87 60       	ori	r24, 0x07	; 7
+ 1d4:	80 83       	st	Z, r24
+	ADCSRA |= (1<<ADEN);				// Enable ADC (ADEN = '1')
+ 1d6:	80 81       	ld	r24, Z
+ 1d8:	80 68       	ori	r24, 0x80	; 128
+ 1da:	80 83       	st	Z, r24
+	//----- The first readout is throw away
+	ADCSRA |= (1 << ADSC);					//Start a conversion
+ 1dc:	80 81       	ld	r24, Z
+ 1de:	80 64       	ori	r24, 0x40	; 64
+ 1e0:	80 83       	st	Z, r24
+	while ((ADCSRA & (1 << ADIF))==0);		// Wait for conversion  completes
+ 1e2:	80 81       	ld	r24, Z
+ 1e4:	84 ff       	sbrs	r24, 4
+ 1e6:	fd cf       	rjmp	.-6      	; 0x1e2 <func_ADC+0x2a>
+	ADCSRA |= (1 << ADIF);					// Clear interrupt flag.
+ 1e8:	ea e7       	ldi	r30, 0x7A	; 122
+ 1ea:	f0 e0       	ldi	r31, 0x00	; 0
+ 1ec:	80 81       	ld	r24, Z
+ 1ee:	80 61       	ori	r24, 0x10	; 16
+ 1f0:	80 83       	st	Z, r24
+ 1f2:	20 e1       	ldi	r18, 0x10	; 16
+	ADCSRA |= (1<<ADEN) | (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0);
+}
+
+uint16_t func_ADC(uint8_t ADC_channel)
+{
+	uint16_t ADC_accum=0;
+ 1f4:	40 e0       	ldi	r20, 0x00	; 0
+ 1f6:	50 e0       	ldi	r21, 0x00	; 0
+	for (uint8_t i=16;i>0;i--)
+	{
+		ADCSRA |= (1 << ADSC);				// Start a conversion
+		while ((ADCSRA & (1 << ADIF))==0);  // Wait for conversion  completes
+		ADCSRA |= (1 << ADIF);				// Clear interrupt flag.
+		ADC_accum +=ADC;
+ 1f8:	a8 e7       	ldi	r26, 0x78	; 120
+ 1fa:	b0 e0       	ldi	r27, 0x00	; 0
+	while ((ADCSRA & (1 << ADIF))==0);		// Wait for conversion  completes
+	ADCSRA |= (1 << ADIF);					// Clear interrupt flag.
+	//---------N Samples are acquired to average--------------------
+	for (uint8_t i=16;i>0;i--)
+	{
+		ADCSRA |= (1 << ADSC);				// Start a conversion
+ 1fc:	90 81       	ld	r25, Z
+ 1fe:	90 64       	ori	r25, 0x40	; 64
+ 200:	90 83       	st	Z, r25
+		while ((ADCSRA & (1 << ADIF))==0);  // Wait for conversion  completes
+ 202:	90 81       	ld	r25, Z
+ 204:	94 ff       	sbrs	r25, 4
+ 206:	fd cf       	rjmp	.-6      	; 0x202 <func_ADC+0x4a>
+		ADCSRA |= (1 << ADIF);				// Clear interrupt flag.
+ 208:	90 81       	ld	r25, Z
+ 20a:	90 61       	ori	r25, 0x10	; 16
+ 20c:	90 83       	st	Z, r25
+		ADC_accum +=ADC;
+ 20e:	8d 91       	ld	r24, X+
+ 210:	9c 91       	ld	r25, X
+ 212:	11 97       	sbiw	r26, 0x01	; 1
+ 214:	48 0f       	add	r20, r24
+ 216:	59 1f       	adc	r21, r25
+ 218:	21 50       	subi	r18, 0x01	; 1
+	//----- The first readout is throw away
+	ADCSRA |= (1 << ADSC);					//Start a conversion
+	while ((ADCSRA & (1 << ADIF))==0);		// Wait for conversion  completes
+	ADCSRA |= (1 << ADIF);					// Clear interrupt flag.
+	//---------N Samples are acquired to average--------------------
+	for (uint8_t i=16;i>0;i--)
+ 21a:	81 f7       	brne	.-32     	; 0x1fc <func_ADC+0x44>
+		ADCSRA |= (1 << ADSC);				// Start a conversion
+		while ((ADCSRA & (1 << ADIF))==0);  // Wait for conversion  completes
+		ADCSRA |= (1 << ADIF);				// Clear interrupt flag.
+		ADC_accum +=ADC;
+	}
+	ADCSRA &= ~(1 << ADEN);
+ 21c:	ea e7       	ldi	r30, 0x7A	; 122
+ 21e:	f0 e0       	ldi	r31, 0x00	; 0
+ 220:	80 81       	ld	r24, Z
+ 222:	8f 77       	andi	r24, 0x7F	; 127
+ 224:	80 83       	st	Z, r24
+	return (ADC_accum >> 4);
+ 226:	ca 01       	movw	r24, r20
+ 228:	92 95       	swap	r25
+ 22a:	82 95       	swap	r24
+ 22c:	8f 70       	andi	r24, 0x0F	; 15
+ 22e:	89 27       	eor	r24, r25
+ 230:	9f 70       	andi	r25, 0x0F	; 15
+ 232:	89 27       	eor	r24, r25
+ 234:	08 95       	ret
+
+00000236 <main>:
+/*
+ * Funcion de inicializacion del zumbador
+ */
+static inline void initBuzzer()
+{
+	DDRB |= (1<<BUZZER);
+ 236:	22 9a       	sbi	0x04, 2	; 4
+	uint8_t value = 0;
+	uint8_t flag = 0;
+	
+	//--- Setup -------------------------
+	initBuzzer();		// Configuracion del zumbador
+	initADC();			// Configuracion del convertidor analogico digital
+ 238:	0e 94 cf 00 	call	0x19e	; 0x19e <initADC>
+/*
+ * Funcion de inicializacion de las ruedas
+ */
+static inline void initWHEELS()
+{
+	DDRD |= (1<<DDD7) | (1<<DDD6);
+ 23c:	8a b1       	in	r24, 0x0a	; 10
+ 23e:	80 6c       	ori	r24, 0xC0	; 192
+ 240:	8a b9       	out	0x0a, r24	; 10
+	DDRC |= (1<<PORTC6);
+ 242:	3e 9a       	sbi	0x07, 6	; 7
+	DDRE |= (1<<PORTE6);
+ 244:	6e 9a       	sbi	0x0d, 6	; 13
+ * Funcion de inicializacion y configuracion de las flag correspondientes para 
+ * que el timer funcione correctamente.
+ */
+static inline void TMR4_PWM_Phase_Init(void)
+{
+	TCNT4=0;
+ 246:	10 92 bf 00 	sts	0x00BF, r1	; 0x8000bf <__DATA_REGION_ORIGIN__+0x5f>
+ 24a:	10 92 be 00 	sts	0x00BE, r1	; 0x8000be <__DATA_REGION_ORIGIN__+0x5e>
+	
+	//Configuración del timer en fase correcta
+	TCCR4D |= (1<<WGM40);
+ 24e:	e3 ec       	ldi	r30, 0xC3	; 195
+ 250:	f0 e0       	ldi	r31, 0x00	; 0
+ 252:	80 81       	ld	r24, Z
+ 254:	81 60       	ori	r24, 0x01	; 1
+ 256:	80 83       	st	Z, r24
+	TCCR4C |= (1<<COM4D1) | (1<<PWM4D);
+ 258:	e2 ec       	ldi	r30, 0xC2	; 194
+ 25a:	f0 e0       	ldi	r31, 0x00	; 0
+ 25c:	80 81       	ld	r24, Z
+ 25e:	89 60       	ori	r24, 0x09	; 9
+ 260:	80 83       	st	Z, r24
+	TCCR4A |= (1<< COM4A0) | (1<<PWM4A);
+ 262:	e0 ec       	ldi	r30, 0xC0	; 192
+ 264:	f0 e0       	ldi	r31, 0x00	; 0
+ 266:	80 81       	ld	r24, Z
+ 268:	82 64       	ori	r24, 0x42	; 66
+ 26a:	80 83       	st	Z, r24
+/*
+ * Funcion que inicializa el timer y configura el divisor de frecuencia de 64 bit.
+ */
+static inline void TMR4_PWM_Phase_Start(void)
+{
+	TCCR4B |= (1<<CS42) | (1<<CS41) | (1<<CS40); //Divisor de 64
+ 26c:	e1 ec       	ldi	r30, 0xC1	; 193
+ 26e:	f0 e0       	ldi	r31, 0x00	; 0
+ 270:	80 81       	ld	r24, Z
+ 272:	87 60       	ori	r24, 0x07	; 7
+ 274:	80 83       	st	Z, r24
+ * Funcion que configura el ciclo de trabajo del timer. Esta funcion recibe dos
+ * parametros que son los que se asignaran a la rueda izquierda y derecha.
+ */
+static inline void TMR4_PWM_Phase_Duty(uint8_t valueOCR4A, uint8_t valueOCR4D)
+{
+	OCR4A = valueOCR4A;
+ 276:	8f ef       	ldi	r24, 0xFF	; 255
+ 278:	80 93 cf 00 	sts	0x00CF, r24	; 0x8000cf <__DATA_REGION_ORIGIN__+0x6f>
+	OCR4D = valueOCR4D;
+ 27c:	10 92 d2 00 	sts	0x00D2, r1	; 0x8000d2 <__DATA_REGION_ORIGIN__+0x72>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 280:	2f ef       	ldi	r18, 0xFF	; 255
+ 282:	83 ed       	ldi	r24, 0xD3	; 211
+ 284:	90 e3       	ldi	r25, 0x30	; 48
+ 286:	21 50       	subi	r18, 0x01	; 1
+ 288:	80 40       	sbci	r24, 0x00	; 0
+ 28a:	90 40       	sbci	r25, 0x00	; 0
+ 28c:	e1 f7       	brne	.-8      	; 0x286 <main+0x50>
+ 28e:	00 c0       	rjmp	.+0      	; 0x290 <main+0x5a>
+ 290:	00 00       	nop
+
+int main(void)
+{
+	State_t current_State = INIT;
+	State_t next_State = INIT;
+	uint8_t value = 0;
+ 292:	d1 2c       	mov	r13, r1
+
+
+
+int main(void)
+{
+	State_t current_State = INIT;
+ 294:	d0 e0       	ldi	r29, 0x00	; 0
+ * Funcion que configura el ciclo de trabajo del timer. Esta funcion recibe dos
+ * parametros que son los que se asignaran a la rueda izquierda y derecha.
+ */
+static inline void TMR4_PWM_Phase_Duty(uint8_t valueOCR4A, uint8_t valueOCR4D)
+{
+	OCR4A = valueOCR4A;
+ 296:	0f 2e       	mov	r0, r31
+ 298:	ff ec       	ldi	r31, 0xCF	; 207
+ 29a:	ef 2e       	mov	r14, r31
+ 29c:	f1 2c       	mov	r15, r1
+ 29e:	f0 2d       	mov	r31, r0
+ 2a0:	bb 24       	eor	r11, r11
+ 2a2:	ba 94       	dec	r11
+	OCR4D = valueOCR4D;
+ 2a4:	02 ed       	ldi	r16, 0xD2	; 210
+ 2a6:	10 e0       	ldi	r17, 0x00	; 0
+ */
+static inline void playSOUND(uint8_t LED, uint16_t son)
+{
+	for(int i = 0; i<300; i++)
+	{
+		PORTB ^= (1<<LED);
+ 2a8:	c4 e0       	ldi	r28, 0x04	; 4
+				{
+					playSOUND(BUZZER,STOP_SOUND);
+					_delay_ms(500);
+				}
+				_delay_ms(2000);
+				next_State = MOVE_BACK;
+ 2aa:	0f 2e       	mov	r0, r31
+ 2ac:	f3 e0       	ldi	r31, 0x03	; 3
+ 2ae:	7f 2e       	mov	r7, r31
+ 2b0:	f0 2d       	mov	r31, r0
+ * Funcion que configura el ciclo de trabajo del timer. Esta funcion recibe dos
+ * parametros que son los que se asignaran a la rueda izquierda y derecha.
+ */
+static inline void TMR4_PWM_Phase_Duty(uint8_t valueOCR4A, uint8_t valueOCR4D)
+{
+	OCR4A = valueOCR4A;
+ 2b2:	0f 2e       	mov	r0, r31
+ 2b4:	fd ec       	ldi	r31, 0xCD	; 205
+ 2b6:	8f 2e       	mov	r8, r31
+ 2b8:	f0 2d       	mov	r31, r0
+	OCR4D = valueOCR4D;
+ 2ba:	0f 2e       	mov	r0, r31
+ 2bc:	f2 e3       	ldi	r31, 0x32	; 50
+ 2be:	af 2e       	mov	r10, r31
+ 2c0:	f0 2d       	mov	r31, r0
+				
+			case MOVE_BACK:
+				backward(SPEEP_WHEEL_LEFT,SPEEP_WHEEL_RIGHT);
+				_delay_ms(200);
+				stop();
+				next_State = MOVE;
+ 2c2:	cc 24       	eor	r12, r12
+ 2c4:	c3 94       	inc	r12
+					value++;
+				else
+					value = 0;
+				
+				if(value != 0 && value%50 == 0 && value != 200)
+					next_State = STOP;
+ 2c6:	68 94       	set
+ 2c8:	66 24       	eor	r6, r6
+ 2ca:	61 f8       	bld	r6, 1
+			case END:
+				
+			break;
+			
+			default:
+				next_State = INIT;
+ 2cc:	91 2c       	mov	r9, r1
+ 2ce:	07 c0       	rjmp	.+14     	; 0x2de <main+0xa8>
+ 2d0:	d9 2d       	mov	r29, r9
+ 2d2:	05 c0       	rjmp	.+10     	; 0x2de <main+0xa8>
+			case MOVE:
+				flag = moveRobot(func_ADC(sensor3), func_ADC(sensor2), func_ADC(sensor4));
+				if(flag == 1)
+					value++;
+				else
+					value = 0;
+ 2d4:	d1 2c       	mov	r13, r1
+ 2d6:	03 c0       	rjmp	.+6      	; 0x2de <main+0xa8>
+				
+				if(value != 0 && value%50 == 0 && value != 200)
+					next_State = STOP;
+ 2d8:	d6 2d       	mov	r29, r6
+ 2da:	01 c0       	rjmp	.+2      	; 0x2de <main+0xa8>
+				else if (value >= 200)
+				{
+					next_State = END;
+ 2dc:	dc 2f       	mov	r29, r28
+	
+	
+	//--- Loop -------------------------
+	while (1)
+	{
+		switch(current_State)
+ 2de:	d2 30       	cpi	r29, 0x02	; 2
+ 2e0:	09 f4       	brne	.+2      	; 0x2e4 <main+0xae>
+ 2e2:	66 c0       	rjmp	.+204    	; 0x3b0 <main+0x17a>
+ 2e4:	28 f4       	brcc	.+10     	; 0x2f0 <main+0xba>
+ 2e6:	dd 23       	and	r29, r29
+ 2e8:	49 f0       	breq	.+18     	; 0x2fc <main+0xc6>
+ 2ea:	d1 30       	cpi	r29, 0x01	; 1
+ 2ec:	01 f1       	breq	.+64     	; 0x32e <main+0xf8>
+ 2ee:	f0 cf       	rjmp	.-32     	; 0x2d0 <main+0x9a>
+ 2f0:	d3 30       	cpi	r29, 0x03	; 3
+ 2f2:	09 f4       	brne	.+2      	; 0x2f6 <main+0xc0>
+ 2f4:	93 c0       	rjmp	.+294    	; 0x41c <__LOCK_REGION_LENGTH__+0x1c>
+ 2f6:	d4 30       	cpi	r29, 0x04	; 4
+ 2f8:	91 f3       	breq	.-28     	; 0x2de <main+0xa8>
+ 2fa:	ea cf       	rjmp	.-44     	; 0x2d0 <main+0x9a>
+ 2fc:	2c e2       	ldi	r18, 0x2C	; 44
+ 2fe:	31 e0       	ldi	r19, 0x01	; 1
+ 300:	85 b1       	in	r24, 0x05	; 5
+ 302:	8c 27       	eor	r24, r28
+ 304:	85 b9       	out	0x05, r24	; 5
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 306:	ef e9       	ldi	r30, 0x9F	; 159
+ 308:	ff e0       	ldi	r31, 0x0F	; 15
+ 30a:	31 97       	sbiw	r30, 0x01	; 1
+ 30c:	f1 f7       	brne	.-4      	; 0x30a <main+0xd4>
+ 30e:	00 c0       	rjmp	.+0      	; 0x310 <main+0xda>
+ 310:	00 00       	nop
+ 312:	21 50       	subi	r18, 0x01	; 1
+ 314:	31 09       	sbc	r19, r1
+ *	Funcion que hace sonar un sonido. Este sonido se emitira a 
+ *	traves del zumbador con un periodo de son.
+ */
+static inline void playSOUND(uint8_t LED, uint16_t son)
+{
+	for(int i = 0; i<300; i++)
+ 316:	a1 f7       	brne	.-24     	; 0x300 <main+0xca>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 318:	ff ef       	ldi	r31, 0xFF	; 255
+ 31a:	23 ed       	ldi	r18, 0xD3	; 211
+ 31c:	80 e3       	ldi	r24, 0x30	; 48
+ 31e:	f1 50       	subi	r31, 0x01	; 1
+ 320:	20 40       	sbci	r18, 0x00	; 0
+ 322:	80 40       	sbci	r24, 0x00	; 0
+ 324:	e1 f7       	brne	.-8      	; 0x31e <main+0xe8>
+ 326:	00 c0       	rjmp	.+0      	; 0x328 <main+0xf2>
+ 328:	00 00       	nop
+		{
+			case INIT:
+				playSOUND(BUZZER,START_SOUND);
+				_delay_ms(1000);
+				next_State = MOVE;
+ 32a:	dc 2d       	mov	r29, r12
+				break;
+ 32c:	d8 cf       	rjmp	.-80     	; 0x2de <main+0xa8>
+			
+			case MOVE:
+				flag = moveRobot(func_ADC(sensor3), func_ADC(sensor2), func_ADC(sensor4));
+ 32e:	8c 2f       	mov	r24, r28
+ 330:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <func_ADC>
+ 334:	2c 01       	movw	r4, r24
+ 336:	86 e0       	ldi	r24, 0x06	; 6
+ 338:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <func_ADC>
+ 33c:	1c 01       	movw	r2, r24
+ 33e:	85 e0       	ldi	r24, 0x05	; 5
+ 340:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <func_ADC>
+ 344:	a2 01       	movw	r20, r4
+ 346:	b1 01       	movw	r22, r2
+ 348:	0e 94 e7 03 	call	0x7ce	; 0x7ce <moveRobot>
+				if(flag == 1)
+ 34c:	81 30       	cpi	r24, 0x01	; 1
+ 34e:	09 f0       	breq	.+2      	; 0x352 <main+0x11c>
+ 350:	c1 cf       	rjmp	.-126    	; 0x2d4 <main+0x9e>
+					value++;
+ 352:	d3 94       	inc	r13
+				else
+					value = 0;
+				
+				if(value != 0 && value%50 == 0 && value != 200)
+ 354:	dd 20       	and	r13, r13
+ 356:	19 f2       	breq	.-122    	; 0x2de <main+0xa8>
+ 358:	99 e2       	ldi	r25, 0x29	; 41
+ 35a:	d9 9e       	mul	r13, r25
+ 35c:	81 2d       	mov	r24, r1
+ 35e:	11 24       	eor	r1, r1
+ 360:	86 95       	lsr	r24
+ 362:	86 95       	lsr	r24
+ 364:	86 95       	lsr	r24
+ 366:	ed 2d       	mov	r30, r13
+ 368:	8a 9d       	mul	r24, r10
+ 36a:	e0 19       	sub	r30, r0
+ 36c:	11 24       	eor	r1, r1
+ 36e:	e1 11       	cpse	r30, r1
+ 370:	06 c0       	rjmp	.+12     	; 0x37e <main+0x148>
+ 372:	f8 ec       	ldi	r31, 0xC8	; 200
+ 374:	df 12       	cpse	r13, r31
+ 376:	b0 cf       	rjmp	.-160    	; 0x2d8 <main+0xa2>
+ 378:	45 e0       	ldi	r20, 0x05	; 5
+ 37a:	50 e0       	ldi	r21, 0x00	; 0
+ 37c:	16 c0       	rjmp	.+44     	; 0x3aa <main+0x174>
+					next_State = STOP;
+				else if (value >= 200)
+ 37e:	27 ec       	ldi	r18, 0xC7	; 199
+ 380:	2d 15       	cp	r18, r13
+ 382:	88 f0       	brcs	.+34     	; 0x3a6 <main+0x170>
+ 384:	ac cf       	rjmp	.-168    	; 0x2de <main+0xa8>
+	{
+		PORTB ^= (1<<LED);
+ 386:	85 b1       	in	r24, 0x05	; 5
+ 388:	8c 27       	eor	r24, r28
+ 38a:	85 b9       	out	0x05, r24	; 5
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 38c:	8f e6       	ldi	r24, 0x6F	; 111
+ 38e:	97 e1       	ldi	r25, 0x17	; 23
+ 390:	01 97       	sbiw	r24, 0x01	; 1
+ 392:	f1 f7       	brne	.-4      	; 0x390 <main+0x15a>
+ 394:	00 c0       	rjmp	.+0      	; 0x396 <main+0x160>
+ 396:	00 00       	nop
+ 398:	21 50       	subi	r18, 0x01	; 1
+ 39a:	31 09       	sbc	r19, r1
+ *	Funcion que hace sonar un sonido. Este sonido se emitira a 
+ *	traves del zumbador con un periodo de son.
+ */
+static inline void playSOUND(uint8_t LED, uint16_t son)
+{
+	for(int i = 0; i<300; i++)
+ 39c:	a1 f7       	brne	.-24     	; 0x386 <main+0x150>
+ 39e:	41 50       	subi	r20, 0x01	; 1
+ 3a0:	51 09       	sbc	r21, r1
+				{
+					next_State = END;
+					for(int i = 0; i<5; i++)
+ 3a2:	19 f4       	brne	.+6      	; 0x3aa <main+0x174>
+ 3a4:	9b cf       	rjmp	.-202    	; 0x2dc <main+0xa6>
+ 3a6:	45 e0       	ldi	r20, 0x05	; 5
+ 3a8:	50 e0       	ldi	r21, 0x00	; 0
+	
+	
+	//--- Loop -------------------------
+	while (1)
+	{
+		switch(current_State)
+ 3aa:	2c e2       	ldi	r18, 0x2C	; 44
+ 3ac:	31 e0       	ldi	r19, 0x01	; 1
+ 3ae:	eb cf       	rjmp	.-42     	; 0x386 <main+0x150>
+ * Funcion que configura el ciclo de trabajo del timer. Esta funcion recibe dos
+ * parametros que son los que se asignaran a la rueda izquierda y derecha.
+ */
+static inline void TMR4_PWM_Phase_Duty(uint8_t valueOCR4A, uint8_t valueOCR4D)
+{
+	OCR4A = valueOCR4A;
+ 3b0:	f7 01       	movw	r30, r14
+ 3b2:	b0 82       	st	Z, r11
+	OCR4D = valueOCR4D;
+ 3b4:	f8 01       	movw	r30, r16
+ 3b6:	10 82       	st	Z, r1
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 3b8:	ff ef       	ldi	r31, 0xFF	; 255
+ 3ba:	27 ea       	ldi	r18, 0xA7	; 167
+ 3bc:	81 e6       	ldi	r24, 0x61	; 97
+ 3be:	f1 50       	subi	r31, 0x01	; 1
+ 3c0:	20 40       	sbci	r18, 0x00	; 0
+ 3c2:	80 40       	sbci	r24, 0x00	; 0
+ 3c4:	e1 f7       	brne	.-8      	; 0x3be <main+0x188>
+ 3c6:	00 c0       	rjmp	.+0      	; 0x3c8 <main+0x192>
+ 3c8:	00 00       	nop
+ 3ca:	43 e0       	ldi	r20, 0x03	; 3
+ 3cc:	50 e0       	ldi	r21, 0x00	; 0
+ 3ce:	18 c0       	rjmp	.+48     	; 0x400 <__LOCK_REGION_LENGTH__>
+	{
+		PORTB ^= (1<<LED);
+ 3d0:	85 b1       	in	r24, 0x05	; 5
+ 3d2:	8c 27       	eor	r24, r28
+ 3d4:	85 b9       	out	0x05, r24	; 5
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 3d6:	ef e8       	ldi	r30, 0x8F	; 143
+ 3d8:	f1 e0       	ldi	r31, 0x01	; 1
+ 3da:	31 97       	sbiw	r30, 0x01	; 1
+ 3dc:	f1 f7       	brne	.-4      	; 0x3da <main+0x1a4>
+ 3de:	00 c0       	rjmp	.+0      	; 0x3e0 <main+0x1aa>
+ 3e0:	00 00       	nop
+ 3e2:	21 50       	subi	r18, 0x01	; 1
+ 3e4:	31 09       	sbc	r19, r1
+ *	Funcion que hace sonar un sonido. Este sonido se emitira a 
+ *	traves del zumbador con un periodo de son.
+ */
+static inline void playSOUND(uint8_t LED, uint16_t son)
+{
+	for(int i = 0; i<300; i++)
+ 3e6:	a1 f7       	brne	.-24     	; 0x3d0 <main+0x19a>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 3e8:	ff ef       	ldi	r31, 0xFF	; 255
+ 3ea:	29 e6       	ldi	r18, 0x69	; 105
+ 3ec:	88 e1       	ldi	r24, 0x18	; 24
+ 3ee:	f1 50       	subi	r31, 0x01	; 1
+ 3f0:	20 40       	sbci	r18, 0x00	; 0
+ 3f2:	80 40       	sbci	r24, 0x00	; 0
+ 3f4:	e1 f7       	brne	.-8      	; 0x3ee <main+0x1b8>
+ 3f6:	00 c0       	rjmp	.+0      	; 0x3f8 <main+0x1c2>
+ 3f8:	00 00       	nop
+ 3fa:	41 50       	subi	r20, 0x01	; 1
+ 3fc:	51 09       	sbc	r21, r1
+				break;
+				
+			case STOP:
+				stop();
+				_delay_ms(2000);
+				for(int i = 0; i<3; i++)
+ 3fe:	19 f0       	breq	.+6      	; 0x406 <__LOCK_REGION_LENGTH__+0x6>
+ 400:	2c e2       	ldi	r18, 0x2C	; 44
+ 402:	31 e0       	ldi	r19, 0x01	; 1
+ 404:	e5 cf       	rjmp	.-54     	; 0x3d0 <main+0x19a>
+ 406:	9f ef       	ldi	r25, 0xFF	; 255
+ 408:	e7 ea       	ldi	r30, 0xA7	; 167
+ 40a:	f1 e6       	ldi	r31, 0x61	; 97
+ 40c:	91 50       	subi	r25, 0x01	; 1
+ 40e:	e0 40       	sbci	r30, 0x00	; 0
+ 410:	f0 40       	sbci	r31, 0x00	; 0
+ 412:	e1 f7       	brne	.-8      	; 0x40c <__LOCK_REGION_LENGTH__+0xc>
+ 414:	00 c0       	rjmp	.+0      	; 0x416 <__LOCK_REGION_LENGTH__+0x16>
+ 416:	00 00       	nop
+				{
+					playSOUND(BUZZER,STOP_SOUND);
+					_delay_ms(500);
+				}
+				_delay_ms(2000);
+				next_State = MOVE_BACK;
+ 418:	d7 2d       	mov	r29, r7
+				break;
+ 41a:	61 cf       	rjmp	.-318    	; 0x2de <main+0xa8>
+/*
+ * Funcion que hace que el robot vaya hacia atras
+ */
+static inline void backward(uint8_t speedLeft, uint8_t speedRight)
+{
+	PORTD |= ((1<<PORTD6));
+ 41c:	5e 9a       	sbi	0x0b, 6	; 11
+	PORTE |= ((1<<PORTE6));
+ 41e:	76 9a       	sbi	0x0e, 6	; 14
+ * Funcion que configura el ciclo de trabajo del timer. Esta funcion recibe dos
+ * parametros que son los que se asignaran a la rueda izquierda y derecha.
+ */
+static inline void TMR4_PWM_Phase_Duty(uint8_t valueOCR4A, uint8_t valueOCR4D)
+{
+	OCR4A = valueOCR4A;
+ 420:	f7 01       	movw	r30, r14
+ 422:	80 82       	st	Z, r8
+	OCR4D = valueOCR4D;
+ 424:	f8 01       	movw	r30, r16
+ 426:	a0 82       	st	Z, r10
+ 428:	ff ef       	ldi	r31, 0xFF	; 255
+ 42a:	23 ec       	ldi	r18, 0xC3	; 195
+ 42c:	89 e0       	ldi	r24, 0x09	; 9
+ 42e:	f1 50       	subi	r31, 0x01	; 1
+ 430:	20 40       	sbci	r18, 0x00	; 0
+ 432:	80 40       	sbci	r24, 0x00	; 0
+ 434:	e1 f7       	brne	.-8      	; 0x42e <__LOCK_REGION_LENGTH__+0x2e>
+ 436:	00 c0       	rjmp	.+0      	; 0x438 <__LOCK_REGION_LENGTH__+0x38>
+ 438:	00 00       	nop
+ * Funcion que configura el ciclo de trabajo del timer. Esta funcion recibe dos
+ * parametros que son los que se asignaran a la rueda izquierda y derecha.
+ */
+static inline void TMR4_PWM_Phase_Duty(uint8_t valueOCR4A, uint8_t valueOCR4D)
+{
+	OCR4A = valueOCR4A;
+ 43a:	f7 01       	movw	r30, r14
+ 43c:	b0 82       	st	Z, r11
+	OCR4D = valueOCR4D;
+ 43e:	f8 01       	movw	r30, r16
+ 440:	10 82       	st	Z, r1
+				
+			case MOVE_BACK:
+				backward(SPEEP_WHEEL_LEFT,SPEEP_WHEEL_RIGHT);
+				_delay_ms(200);
+				stop();
+				next_State = MOVE;
+ 442:	dc 2d       	mov	r29, r12
+				break;
+ 444:	4c cf       	rjmp	.-360    	; 0x2de <main+0xa8>
+
+00000446 <__vector_10>:
+
+// USB Device Interrupt - handle all device-level events
+// the transmit buffer flushing is triggered by the start of frame
+//
+ISR(USB_GEN_vect)
+{
+ 446:	1f 92       	push	r1
+ 448:	0f 92       	push	r0
+ 44a:	0f b6       	in	r0, 0x3f	; 63
+ 44c:	0f 92       	push	r0
+ 44e:	11 24       	eor	r1, r1
+ 450:	8f 93       	push	r24
+ 452:	9f 93       	push	r25
+ 454:	ef 93       	push	r30
+ 456:	ff 93       	push	r31
+	uint8_t intbits, t;
+
+        intbits = UDINT;
+ 458:	e1 ee       	ldi	r30, 0xE1	; 225
+ 45a:	f0 e0       	ldi	r31, 0x00	; 0
+ 45c:	80 81       	ld	r24, Z
+        UDINT = 0;
+ 45e:	10 82       	st	Z, r1
+        if (intbits & (1<<EORSTI)) {
+ 460:	83 ff       	sbrs	r24, 3
+ 462:	11 c0       	rjmp	.+34     	; 0x486 <__vector_10+0x40>
+		UENUM = 0;
+ 464:	10 92 e9 00 	sts	0x00E9, r1	; 0x8000e9 <__DATA_REGION_ORIGIN__+0x89>
+		UECONX = 1;
+ 468:	91 e0       	ldi	r25, 0x01	; 1
+ 46a:	90 93 eb 00 	sts	0x00EB, r25	; 0x8000eb <__DATA_REGION_ORIGIN__+0x8b>
+		UECFG0X = EP_TYPE_CONTROL;
+ 46e:	10 92 ec 00 	sts	0x00EC, r1	; 0x8000ec <__DATA_REGION_ORIGIN__+0x8c>
+		UECFG1X = EP_SIZE(ENDPOINT0_SIZE) | EP_SINGLE_BUFFER;
+ 472:	92 e1       	ldi	r25, 0x12	; 18
+ 474:	90 93 ed 00 	sts	0x00ED, r25	; 0x8000ed <__DATA_REGION_ORIGIN__+0x8d>
+		UEIENX = (1<<RXSTPE);
+ 478:	98 e0       	ldi	r25, 0x08	; 8
+ 47a:	90 93 f0 00 	sts	0x00F0, r25	; 0x8000f0 <__DATA_REGION_ORIGIN__+0x90>
+		usb_configuration = 0;
+ 47e:	10 92 0a 01 	sts	0x010A, r1	; 0x80010a <usb_configuration>
+		cdc_line_rtsdtr = 0;
+ 482:	10 92 08 01 	sts	0x0108, r1	; 0x800108 <__data_end>
+        }
+	if (intbits & (1<<SOFI)) {
+ 486:	82 ff       	sbrs	r24, 2
+ 488:	13 c0       	rjmp	.+38     	; 0x4b0 <__vector_10+0x6a>
+		if (usb_configuration) {
+ 48a:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <usb_configuration>
+ 48e:	88 23       	and	r24, r24
+ 490:	79 f0       	breq	.+30     	; 0x4b0 <__vector_10+0x6a>
+			t = transmit_flush_timer;
+ 492:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <transmit_flush_timer>
+			if (t) {
+ 496:	88 23       	and	r24, r24
+ 498:	59 f0       	breq	.+22     	; 0x4b0 <__vector_10+0x6a>
+				transmit_flush_timer = --t;
+ 49a:	81 50       	subi	r24, 0x01	; 1
+ 49c:	80 93 09 01 	sts	0x0109, r24	; 0x800109 <transmit_flush_timer>
+				if (!t) {
+ 4a0:	81 11       	cpse	r24, r1
+ 4a2:	06 c0       	rjmp	.+12     	; 0x4b0 <__vector_10+0x6a>
+					UENUM = CDC_TX_ENDPOINT;
+ 4a4:	84 e0       	ldi	r24, 0x04	; 4
+ 4a6:	80 93 e9 00 	sts	0x00E9, r24	; 0x8000e9 <__DATA_REGION_ORIGIN__+0x89>
+					UEINTX = 0x3A;
+ 4aa:	8a e3       	ldi	r24, 0x3A	; 58
+ 4ac:	80 93 e8 00 	sts	0x00E8, r24	; 0x8000e8 <__DATA_REGION_ORIGIN__+0x88>
+				}
+			}
+		}
+	}
+}
+ 4b0:	ff 91       	pop	r31
+ 4b2:	ef 91       	pop	r30
+ 4b4:	9f 91       	pop	r25
+ 4b6:	8f 91       	pop	r24
+ 4b8:	0f 90       	pop	r0
+ 4ba:	0f be       	out	0x3f, r0	; 63
+ 4bc:	0f 90       	pop	r0
+ 4be:	1f 90       	pop	r1
+ 4c0:	18 95       	reti
+
+000004c2 <__vector_11>:
+// USB Endpoint Interrupt - endpoint 0 is handled here.  The
+// other endpoints are manipulated by the user-callable
+// functions, and the start-of-frame interrupt.
+//
+ISR(USB_COM_vect)
+{
+ 4c2:	1f 92       	push	r1
+ 4c4:	0f 92       	push	r0
+ 4c6:	0f b6       	in	r0, 0x3f	; 63
+ 4c8:	0f 92       	push	r0
+ 4ca:	11 24       	eor	r1, r1
+ 4cc:	0f 93       	push	r16
+ 4ce:	1f 93       	push	r17
+ 4d0:	2f 93       	push	r18
+ 4d2:	3f 93       	push	r19
+ 4d4:	4f 93       	push	r20
+ 4d6:	5f 93       	push	r21
+ 4d8:	6f 93       	push	r22
+ 4da:	7f 93       	push	r23
+ 4dc:	8f 93       	push	r24
+ 4de:	9f 93       	push	r25
+ 4e0:	af 93       	push	r26
+ 4e2:	bf 93       	push	r27
+ 4e4:	cf 93       	push	r28
+ 4e6:	df 93       	push	r29
+ 4e8:	ef 93       	push	r30
+ 4ea:	ff 93       	push	r31
+	uint16_t wLength;
+	uint16_t desc_val;
+	const uint8_t *desc_addr;
+	uint8_t	desc_length;
+
+        UENUM = 0;
+ 4ec:	10 92 e9 00 	sts	0x00E9, r1	; 0x8000e9 <__DATA_REGION_ORIGIN__+0x89>
+        intbits = UEINTX;
+ 4f0:	80 91 e8 00 	lds	r24, 0x00E8	; 0x8000e8 <__DATA_REGION_ORIGIN__+0x88>
+        if (intbits & (1<<RXSTPI)) {
+ 4f4:	83 ff       	sbrs	r24, 3
+ 4f6:	4f c1       	rjmp	.+670    	; 0x796 <__vector_11+0x2d4>
+                bmRequestType = UEDATX;
+ 4f8:	e1 ef       	ldi	r30, 0xF1	; 241
+ 4fa:	f0 e0       	ldi	r31, 0x00	; 0
+ 4fc:	a0 81       	ld	r26, Z
+                bRequest = UEDATX;
+ 4fe:	80 81       	ld	r24, Z
+                wValue = UEDATX;
+ 500:	20 81       	ld	r18, Z
+                wValue |= (UEDATX << 8);
+ 502:	90 81       	ld	r25, Z
+ 504:	30 e0       	ldi	r19, 0x00	; 0
+ 506:	39 2b       	or	r19, r25
+                wIndex = UEDATX;
+ 508:	40 81       	ld	r20, Z
+                wIndex |= (UEDATX << 8);
+ 50a:	90 81       	ld	r25, Z
+ 50c:	50 e0       	ldi	r21, 0x00	; 0
+ 50e:	ba 01       	movw	r22, r20
+ 510:	79 2b       	or	r23, r25
+                wLength = UEDATX;
+ 512:	c0 81       	ld	r28, Z
+                wLength |= (UEDATX << 8);
+ 514:	d0 81       	ld	r29, Z
+                UEINTX = ~((1<<RXSTPI) | (1<<RXOUTI) | (1<<TXINI));
+ 516:	92 ef       	ldi	r25, 0xF2	; 242
+ 518:	90 93 e8 00 	sts	0x00E8, r25	; 0x8000e8 <__DATA_REGION_ORIGIN__+0x88>
+                if (bRequest == GET_DESCRIPTOR) {
+ 51c:	86 30       	cpi	r24, 0x06	; 6
+ 51e:	09 f0       	breq	.+2      	; 0x522 <__vector_11+0x60>
+ 520:	59 c0       	rjmp	.+178    	; 0x5d4 <__vector_11+0x112>
+ 522:	04 c0       	rjmp	.+8      	; 0x52c <__vector_11+0x6a>
+			list = (const uint8_t *)descriptor_list;
+			for (i=0; ; i++) {
+				if (i >= NUM_DESC_LIST) {
+					UECONX = (1<<STALLRQ)|(1<<EPEN);  //stall
+ 524:	81 e2       	ldi	r24, 0x21	; 33
+ 526:	80 93 eb 00 	sts	0x00EB, r24	; 0x8000eb <__DATA_REGION_ORIGIN__+0x8b>
+					return;
+ 52a:	3c c1       	rjmp	.+632    	; 0x7a4 <__vector_11+0x2e2>
+ 52c:	4c ea       	ldi	r20, 0xAC	; 172
+ 52e:	50 e0       	ldi	r21, 0x00	; 0
+ 530:	06 ed       	ldi	r16, 0xD6	; 214
+ 532:	10 e0       	ldi	r17, 0x00	; 0
+ 534:	ca 01       	movw	r24, r20
+				}
+				desc_val = pgm_read_word(list);
+ 536:	fa 01       	movw	r30, r20
+ 538:	a5 91       	lpm	r26, Z+
+ 53a:	b4 91       	lpm	r27, Z
+				if (desc_val != wValue) {
+ 53c:	2a 17       	cp	r18, r26
+ 53e:	3b 07       	cpc	r19, r27
+ 540:	09 f5       	brne	.+66     	; 0x584 <__vector_11+0xc2>
+					list += sizeof(struct descriptor_list_struct);
+					continue;
+				}
+				list += 2;
+				desc_val = pgm_read_word(list);
+ 542:	fa 01       	movw	r30, r20
+ 544:	32 96       	adiw	r30, 0x02	; 2
+ 546:	a5 91       	lpm	r26, Z+
+ 548:	b4 91       	lpm	r27, Z
+				if (desc_val != wIndex) {
+ 54a:	6a 17       	cp	r22, r26
+ 54c:	7b 07       	cpc	r23, r27
+ 54e:	d1 f4       	brne	.+52     	; 0x584 <__vector_11+0xc2>
+					list += sizeof(struct descriptor_list_struct)-2;
+					continue;
+				}
+				list += 2;
+ 550:	fa 01       	movw	r30, r20
+ 552:	34 96       	adiw	r30, 0x04	; 4
+				desc_addr = (const uint8_t *)pgm_read_word(list);
+ 554:	45 91       	lpm	r20, Z+
+ 556:	54 91       	lpm	r21, Z
+				list += 2;
+ 558:	fc 01       	movw	r30, r24
+ 55a:	36 96       	adiw	r30, 0x06	; 6
+				desc_length = pgm_read_byte(list);
+ 55c:	24 91       	lpm	r18, Z
+				break;
+			}
+			len = (wLength < 256) ? wLength : 255;
+ 55e:	8c 2f       	mov	r24, r28
+ 560:	90 e0       	ldi	r25, 0x00	; 0
+ 562:	9d 2b       	or	r25, r29
+ 564:	8f 3f       	cpi	r24, 0xFF	; 255
+ 566:	91 05       	cpc	r25, r1
+ 568:	19 f0       	breq	.+6      	; 0x570 <__vector_11+0xae>
+ 56a:	10 f0       	brcs	.+4      	; 0x570 <__vector_11+0xae>
+ 56c:	8f ef       	ldi	r24, 0xFF	; 255
+ 56e:	90 e0       	ldi	r25, 0x00	; 0
+ 570:	82 17       	cp	r24, r18
+ 572:	08 f4       	brcc	.+2      	; 0x576 <__vector_11+0xb4>
+ 574:	28 2f       	mov	r18, r24
+			if (len > desc_length) len = desc_length;
+			do {
+				// wait for host ready for IN packet
+				do {
+					i = UEINTX;
+ 576:	a8 ee       	ldi	r26, 0xE8	; 232
+ 578:	b0 e0       	ldi	r27, 0x00	; 0
+				} while (!(i & ((1<<TXINI)|(1<<RXOUTI))));
+				if (i & (1<<RXOUTI)) return;	// abort
+				// send IN packet
+				n = len < ENDPOINT0_SIZE ? len : ENDPOINT0_SIZE;
+ 57a:	70 e1       	ldi	r23, 0x10	; 16
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+}
+static inline void usb_send_in(void)
+{
+	UEINTX = ~(1<<TXINI);
+ 57c:	6e ef       	ldi	r22, 0xFE	; 254
+				} while (!(i & ((1<<TXINI)|(1<<RXOUTI))));
+				if (i & (1<<RXOUTI)) return;	// abort
+				// send IN packet
+				n = len < ENDPOINT0_SIZE ? len : ENDPOINT0_SIZE;
+				for (i = n; i; i--) {
+					UEDATX = pgm_read_byte(desc_addr++);
+ 57e:	c1 ef       	ldi	r28, 0xF1	; 241
+ 580:	d0 e0       	ldi	r29, 0x00	; 0
+ 582:	06 c0       	rjmp	.+12     	; 0x590 <__vector_11+0xce>
+ 584:	49 5f       	subi	r20, 0xF9	; 249
+ 586:	5f 4f       	sbci	r21, 0xFF	; 255
+                wLength |= (UEDATX << 8);
+                UEINTX = ~((1<<RXSTPI) | (1<<RXOUTI) | (1<<TXINI));
+                if (bRequest == GET_DESCRIPTOR) {
+			list = (const uint8_t *)descriptor_list;
+			for (i=0; ; i++) {
+				if (i >= NUM_DESC_LIST) {
+ 588:	40 17       	cp	r20, r16
+ 58a:	51 07       	cpc	r21, r17
+ 58c:	99 f6       	brne	.-90     	; 0x534 <__vector_11+0x72>
+ 58e:	ca cf       	rjmp	.-108    	; 0x524 <__vector_11+0x62>
+			len = (wLength < 256) ? wLength : 255;
+			if (len > desc_length) len = desc_length;
+			do {
+				// wait for host ready for IN packet
+				do {
+					i = UEINTX;
+ 590:	8c 91       	ld	r24, X
+				} while (!(i & ((1<<TXINI)|(1<<RXOUTI))));
+ 592:	98 2f       	mov	r25, r24
+ 594:	95 70       	andi	r25, 0x05	; 5
+ 596:	e1 f3       	breq	.-8      	; 0x590 <__vector_11+0xce>
+				if (i & (1<<RXOUTI)) return;	// abort
+ 598:	82 fd       	sbrc	r24, 2
+ 59a:	04 c1       	rjmp	.+520    	; 0x7a4 <__vector_11+0x2e2>
+				// send IN packet
+				n = len < ENDPOINT0_SIZE ? len : ENDPOINT0_SIZE;
+ 59c:	32 2f       	mov	r19, r18
+ 59e:	21 31       	cpi	r18, 0x11	; 17
+ 5a0:	08 f0       	brcs	.+2      	; 0x5a4 <__vector_11+0xe2>
+ 5a2:	37 2f       	mov	r19, r23
+				for (i = n; i; i--) {
+ 5a4:	33 23       	and	r19, r19
+ 5a6:	09 f4       	brne	.+2      	; 0x5aa <__vector_11+0xe8>
+ 5a8:	fa c0       	rjmp	.+500    	; 0x79e <__vector_11+0x2dc>
+ 5aa:	fa 01       	movw	r30, r20
+ 5ac:	83 2f       	mov	r24, r19
+					UEDATX = pgm_read_byte(desc_addr++);
+ 5ae:	94 91       	lpm	r25, Z
+ 5b0:	98 83       	st	Y, r25
+					i = UEINTX;
+				} while (!(i & ((1<<TXINI)|(1<<RXOUTI))));
+				if (i & (1<<RXOUTI)) return;	// abort
+				// send IN packet
+				n = len < ENDPOINT0_SIZE ? len : ENDPOINT0_SIZE;
+				for (i = n; i; i--) {
+ 5b2:	81 50       	subi	r24, 0x01	; 1
+ 5b4:	31 96       	adiw	r30, 0x01	; 1
+ 5b6:	81 11       	cpse	r24, r1
+ 5b8:	fa cf       	rjmp	.-12     	; 0x5ae <__vector_11+0xec>
+ 5ba:	8f ef       	ldi	r24, 0xFF	; 255
+ 5bc:	83 0f       	add	r24, r19
+ 5be:	90 e0       	ldi	r25, 0x00	; 0
+ 5c0:	01 96       	adiw	r24, 0x01	; 1
+ 5c2:	48 0f       	add	r20, r24
+ 5c4:	59 1f       	adc	r21, r25
+					UEDATX = pgm_read_byte(desc_addr++);
+				}
+				len -= n;
+ 5c6:	23 1b       	sub	r18, r19
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+}
+static inline void usb_send_in(void)
+{
+	UEINTX = ~(1<<TXINI);
+ 5c8:	6c 93       	st	X, r22
+				for (i = n; i; i--) {
+					UEDATX = pgm_read_byte(desc_addr++);
+				}
+				len -= n;
+				usb_send_in();
+			} while (len || n == ENDPOINT0_SIZE);
+ 5ca:	21 11       	cpse	r18, r1
+ 5cc:	e1 cf       	rjmp	.-62     	; 0x590 <__vector_11+0xce>
+ 5ce:	30 31       	cpi	r19, 0x10	; 16
+ 5d0:	f9 f2       	breq	.-66     	; 0x590 <__vector_11+0xce>
+ 5d2:	e8 c0       	rjmp	.+464    	; 0x7a4 <__vector_11+0x2e2>
+			return;
+                }
+		if (bRequest == SET_ADDRESS) {
+ 5d4:	85 30       	cpi	r24, 0x05	; 5
+ 5d6:	61 f4       	brne	.+24     	; 0x5f0 <__vector_11+0x12e>
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+}
+static inline void usb_send_in(void)
+{
+	UEINTX = ~(1<<TXINI);
+ 5d8:	8e ef       	ldi	r24, 0xFE	; 254
+ 5da:	80 93 e8 00 	sts	0x00E8, r24	; 0x8000e8 <__DATA_REGION_ORIGIN__+0x88>
+
+
+// Misc functions to wait for ready and send/receive packets
+static inline void usb_wait_in_ready(void)
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+ 5de:	e8 ee       	ldi	r30, 0xE8	; 232
+ 5e0:	f0 e0       	ldi	r31, 0x00	; 0
+ 5e2:	80 81       	ld	r24, Z
+ 5e4:	80 ff       	sbrs	r24, 0
+ 5e6:	fd cf       	rjmp	.-6      	; 0x5e2 <__vector_11+0x120>
+			return;
+                }
+		if (bRequest == SET_ADDRESS) {
+			usb_send_in();
+			usb_wait_in_ready();
+			UDADDR = wValue | (1<<ADDEN);
+ 5e8:	20 68       	ori	r18, 0x80	; 128
+ 5ea:	20 93 e3 00 	sts	0x00E3, r18	; 0x8000e3 <__DATA_REGION_ORIGIN__+0x83>
+			return;
+ 5ee:	da c0       	rjmp	.+436    	; 0x7a4 <__vector_11+0x2e2>
+		}
+		if (bRequest == SET_CONFIGURATION && bmRequestType == 0) {
+ 5f0:	89 30       	cpi	r24, 0x09	; 9
+ 5f2:	09 f0       	breq	.+2      	; 0x5f6 <__vector_11+0x134>
+ 5f4:	35 c0       	rjmp	.+106    	; 0x660 <__vector_11+0x19e>
+ 5f6:	a1 11       	cpse	r26, r1
+ 5f8:	ce c0       	rjmp	.+412    	; 0x796 <__vector_11+0x2d4>
+			usb_configuration = wValue;
+ 5fa:	20 93 0a 01 	sts	0x010A, r18	; 0x80010a <usb_configuration>
+			cdc_line_rtsdtr = 0;
+ 5fe:	10 92 08 01 	sts	0x0108, r1	; 0x800108 <__data_end>
+			transmit_flush_timer = 0;
+ 602:	10 92 09 01 	sts	0x0109, r1	; 0x800109 <transmit_flush_timer>
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+}
+static inline void usb_send_in(void)
+{
+	UEINTX = ~(1<<TXINI);
+ 606:	8e ef       	ldi	r24, 0xFE	; 254
+ 608:	80 93 e8 00 	sts	0x00E8, r24	; 0x8000e8 <__DATA_REGION_ORIGIN__+0x88>
+			usb_configuration = wValue;
+			cdc_line_rtsdtr = 0;
+			transmit_flush_timer = 0;
+			usb_send_in();
+			cfg = endpoint_config_table;
+			for (i=1; i<5; i++) {
+ 60c:	81 e0       	ldi	r24, 0x01	; 1
+		if (bRequest == SET_CONFIGURATION && bmRequestType == 0) {
+			usb_configuration = wValue;
+			cdc_line_rtsdtr = 0;
+			transmit_flush_timer = 0;
+			usb_send_in();
+			cfg = endpoint_config_table;
+ 60e:	25 e5       	ldi	r18, 0x55	; 85
+ 610:	31 e0       	ldi	r19, 0x01	; 1
+			for (i=1; i<5; i++) {
+				UENUM = i;
+ 612:	c9 ee       	ldi	r28, 0xE9	; 233
+ 614:	d0 e0       	ldi	r29, 0x00	; 0
+				en = pgm_read_byte(cfg++);
+				UECONX = en;
+ 616:	ab ee       	ldi	r26, 0xEB	; 235
+ 618:	b0 e0       	ldi	r27, 0x00	; 0
+				if (en) {
+					UECFG0X = pgm_read_byte(cfg++);
+ 61a:	0c ee       	ldi	r16, 0xEC	; 236
+ 61c:	10 e0       	ldi	r17, 0x00	; 0
+					UECFG1X = pgm_read_byte(cfg++);
+ 61e:	6d ee       	ldi	r22, 0xED	; 237
+ 620:	70 e0       	ldi	r23, 0x00	; 0
+			cdc_line_rtsdtr = 0;
+			transmit_flush_timer = 0;
+			usb_send_in();
+			cfg = endpoint_config_table;
+			for (i=1; i<5; i++) {
+				UENUM = i;
+ 622:	88 83       	st	Y, r24
+				en = pgm_read_byte(cfg++);
+ 624:	a9 01       	movw	r20, r18
+ 626:	4f 5f       	subi	r20, 0xFF	; 255
+ 628:	5f 4f       	sbci	r21, 0xFF	; 255
+ 62a:	f9 01       	movw	r30, r18
+ 62c:	94 91       	lpm	r25, Z
+				UECONX = en;
+ 62e:	9c 93       	st	X, r25
+				if (en) {
+ 630:	99 23       	and	r25, r25
+ 632:	61 f0       	breq	.+24     	; 0x64c <__vector_11+0x18a>
+					UECFG0X = pgm_read_byte(cfg++);
+ 634:	fa 01       	movw	r30, r20
+ 636:	44 91       	lpm	r20, Z
+ 638:	f8 01       	movw	r30, r16
+ 63a:	40 83       	st	Z, r20
+					UECFG1X = pgm_read_byte(cfg++);
+ 63c:	f9 01       	movw	r30, r18
+ 63e:	32 96       	adiw	r30, 0x02	; 2
+ 640:	94 91       	lpm	r25, Z
+ 642:	2d 5f       	subi	r18, 0xFD	; 253
+ 644:	3f 4f       	sbci	r19, 0xFF	; 255
+ 646:	fb 01       	movw	r30, r22
+ 648:	90 83       	st	Z, r25
+ 64a:	01 c0       	rjmp	.+2      	; 0x64e <__vector_11+0x18c>
+			transmit_flush_timer = 0;
+			usb_send_in();
+			cfg = endpoint_config_table;
+			for (i=1; i<5; i++) {
+				UENUM = i;
+				en = pgm_read_byte(cfg++);
+ 64c:	9a 01       	movw	r18, r20
+			usb_configuration = wValue;
+			cdc_line_rtsdtr = 0;
+			transmit_flush_timer = 0;
+			usb_send_in();
+			cfg = endpoint_config_table;
+			for (i=1; i<5; i++) {
+ 64e:	8f 5f       	subi	r24, 0xFF	; 255
+ 650:	85 30       	cpi	r24, 0x05	; 5
+ 652:	39 f7       	brne	.-50     	; 0x622 <__vector_11+0x160>
+				if (en) {
+					UECFG0X = pgm_read_byte(cfg++);
+					UECFG1X = pgm_read_byte(cfg++);
+				}
+			}
+        		UERST = 0x1E;
+ 654:	ea ee       	ldi	r30, 0xEA	; 234
+ 656:	f0 e0       	ldi	r31, 0x00	; 0
+ 658:	8e e1       	ldi	r24, 0x1E	; 30
+ 65a:	80 83       	st	Z, r24
+        		UERST = 0;
+ 65c:	10 82       	st	Z, r1
+			return;
+ 65e:	a2 c0       	rjmp	.+324    	; 0x7a4 <__vector_11+0x2e2>
+		}
+		if (bRequest == GET_CONFIGURATION && bmRequestType == 0x80) {
+ 660:	88 30       	cpi	r24, 0x08	; 8
+ 662:	81 f4       	brne	.+32     	; 0x684 <__vector_11+0x1c2>
+ 664:	a0 38       	cpi	r26, 0x80	; 128
+ 666:	09 f0       	breq	.+2      	; 0x66a <__vector_11+0x1a8>
+ 668:	96 c0       	rjmp	.+300    	; 0x796 <__vector_11+0x2d4>
+
+
+// Misc functions to wait for ready and send/receive packets
+static inline void usb_wait_in_ready(void)
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+ 66a:	e8 ee       	ldi	r30, 0xE8	; 232
+ 66c:	f0 e0       	ldi	r31, 0x00	; 0
+ 66e:	80 81       	ld	r24, Z
+ 670:	80 ff       	sbrs	r24, 0
+ 672:	fd cf       	rjmp	.-6      	; 0x66e <__vector_11+0x1ac>
+        		UERST = 0;
+			return;
+		}
+		if (bRequest == GET_CONFIGURATION && bmRequestType == 0x80) {
+			usb_wait_in_ready();
+			UEDATX = usb_configuration;
+ 674:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <usb_configuration>
+ 678:	80 93 f1 00 	sts	0x00F1, r24	; 0x8000f1 <__DATA_REGION_ORIGIN__+0x91>
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+}
+static inline void usb_send_in(void)
+{
+	UEINTX = ~(1<<TXINI);
+ 67c:	8e ef       	ldi	r24, 0xFE	; 254
+ 67e:	80 93 e8 00 	sts	0x00E8, r24	; 0x8000e8 <__DATA_REGION_ORIGIN__+0x88>
+ 682:	90 c0       	rjmp	.+288    	; 0x7a4 <__vector_11+0x2e2>
+			usb_wait_in_ready();
+			UEDATX = usb_configuration;
+			usb_send_in();
+			return;
+		}
+		if (bRequest == CDC_GET_LINE_CODING && bmRequestType == 0xA1) {
+ 684:	81 32       	cpi	r24, 0x21	; 33
+ 686:	b9 f4       	brne	.+46     	; 0x6b6 <__vector_11+0x1f4>
+ 688:	a1 3a       	cpi	r26, 0xA1	; 161
+ 68a:	09 f0       	breq	.+2      	; 0x68e <__vector_11+0x1cc>
+ 68c:	84 c0       	rjmp	.+264    	; 0x796 <__vector_11+0x2d4>
+
+
+// Misc functions to wait for ready and send/receive packets
+static inline void usb_wait_in_ready(void)
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+ 68e:	e8 ee       	ldi	r30, 0xE8	; 232
+ 690:	f0 e0       	ldi	r31, 0x00	; 0
+ 692:	80 81       	ld	r24, Z
+ 694:	80 ff       	sbrs	r24, 0
+ 696:	fd cf       	rjmp	.-6      	; 0x692 <__vector_11+0x1d0>
+ 698:	e0 e0       	ldi	r30, 0x00	; 0
+ 69a:	f1 e0       	ldi	r31, 0x01	; 1
+ 69c:	27 e0       	ldi	r18, 0x07	; 7
+ 69e:	31 e0       	ldi	r19, 0x01	; 1
+		}
+		if (bRequest == CDC_GET_LINE_CODING && bmRequestType == 0xA1) {
+			usb_wait_in_ready();
+			p = cdc_line_coding;
+			for (i=0; i<7; i++) {
+				UEDATX = *p++;
+ 6a0:	a1 ef       	ldi	r26, 0xF1	; 241
+ 6a2:	b0 e0       	ldi	r27, 0x00	; 0
+ 6a4:	81 91       	ld	r24, Z+
+ 6a6:	8c 93       	st	X, r24
+			return;
+		}
+		if (bRequest == CDC_GET_LINE_CODING && bmRequestType == 0xA1) {
+			usb_wait_in_ready();
+			p = cdc_line_coding;
+			for (i=0; i<7; i++) {
+ 6a8:	2e 17       	cp	r18, r30
+ 6aa:	3f 07       	cpc	r19, r31
+ 6ac:	d9 f7       	brne	.-10     	; 0x6a4 <__vector_11+0x1e2>
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+}
+static inline void usb_send_in(void)
+{
+	UEINTX = ~(1<<TXINI);
+ 6ae:	8e ef       	ldi	r24, 0xFE	; 254
+ 6b0:	80 93 e8 00 	sts	0x00E8, r24	; 0x8000e8 <__DATA_REGION_ORIGIN__+0x88>
+ 6b4:	77 c0       	rjmp	.+238    	; 0x7a4 <__vector_11+0x2e2>
+				UEDATX = *p++;
+			}
+			usb_send_in();
+			return;
+		}
+		if (bRequest == CDC_SET_LINE_CODING && bmRequestType == 0x21) {
+ 6b6:	80 32       	cpi	r24, 0x20	; 32
+ 6b8:	d1 f4       	brne	.+52     	; 0x6ee <__vector_11+0x22c>
+ 6ba:	a1 32       	cpi	r26, 0x21	; 33
+ 6bc:	09 f0       	breq	.+2      	; 0x6c0 <__vector_11+0x1fe>
+ 6be:	6b c0       	rjmp	.+214    	; 0x796 <__vector_11+0x2d4>
+{
+	UEINTX = ~(1<<TXINI);
+}
+static inline void usb_wait_receive_out(void)
+{
+	while (!(UEINTX & (1<<RXOUTI))) ;
+ 6c0:	e8 ee       	ldi	r30, 0xE8	; 232
+ 6c2:	f0 e0       	ldi	r31, 0x00	; 0
+ 6c4:	80 81       	ld	r24, Z
+ 6c6:	82 ff       	sbrs	r24, 2
+ 6c8:	fd cf       	rjmp	.-6      	; 0x6c4 <__vector_11+0x202>
+ 6ca:	e0 e0       	ldi	r30, 0x00	; 0
+ 6cc:	f1 e0       	ldi	r31, 0x01	; 1
+ 6ce:	27 e0       	ldi	r18, 0x07	; 7
+ 6d0:	31 e0       	ldi	r19, 0x01	; 1
+		}
+		if (bRequest == CDC_SET_LINE_CODING && bmRequestType == 0x21) {
+			usb_wait_receive_out();
+			p = cdc_line_coding;
+			for (i=0; i<7; i++) {
+				*p++ = UEDATX;
+ 6d2:	a1 ef       	ldi	r26, 0xF1	; 241
+ 6d4:	b0 e0       	ldi	r27, 0x00	; 0
+ 6d6:	8c 91       	ld	r24, X
+ 6d8:	81 93       	st	Z+, r24
+			return;
+		}
+		if (bRequest == CDC_SET_LINE_CODING && bmRequestType == 0x21) {
+			usb_wait_receive_out();
+			p = cdc_line_coding;
+			for (i=0; i<7; i++) {
+ 6da:	2e 17       	cp	r18, r30
+ 6dc:	3f 07       	cpc	r19, r31
+ 6de:	d9 f7       	brne	.-10     	; 0x6d6 <__vector_11+0x214>
+{
+	while (!(UEINTX & (1<<RXOUTI))) ;
+}
+static inline void usb_ack_out(void)
+{
+	UEINTX = ~(1<<RXOUTI);
+ 6e0:	e8 ee       	ldi	r30, 0xE8	; 232
+ 6e2:	f0 e0       	ldi	r31, 0x00	; 0
+ 6e4:	8b ef       	ldi	r24, 0xFB	; 251
+ 6e6:	80 83       	st	Z, r24
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+}
+static inline void usb_send_in(void)
+{
+	UEINTX = ~(1<<TXINI);
+ 6e8:	8e ef       	ldi	r24, 0xFE	; 254
+ 6ea:	80 83       	st	Z, r24
+ 6ec:	5b c0       	rjmp	.+182    	; 0x7a4 <__vector_11+0x2e2>
+			}
+			usb_ack_out();
+			usb_send_in();
+			return;
+		}
+		if (bRequest == CDC_SET_CONTROL_LINE_STATE && bmRequestType == 0x21) {
+ 6ee:	82 32       	cpi	r24, 0x22	; 34
+ 6f0:	71 f4       	brne	.+28     	; 0x70e <__vector_11+0x24c>
+ 6f2:	a1 32       	cpi	r26, 0x21	; 33
+ 6f4:	09 f0       	breq	.+2      	; 0x6f8 <__vector_11+0x236>
+ 6f6:	4f c0       	rjmp	.+158    	; 0x796 <__vector_11+0x2d4>
+			cdc_line_rtsdtr = wValue;
+ 6f8:	20 93 08 01 	sts	0x0108, r18	; 0x800108 <__data_end>
+
+
+// Misc functions to wait for ready and send/receive packets
+static inline void usb_wait_in_ready(void)
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+ 6fc:	e8 ee       	ldi	r30, 0xE8	; 232
+ 6fe:	f0 e0       	ldi	r31, 0x00	; 0
+ 700:	80 81       	ld	r24, Z
+ 702:	80 ff       	sbrs	r24, 0
+ 704:	fd cf       	rjmp	.-6      	; 0x700 <__vector_11+0x23e>
+}
+static inline void usb_send_in(void)
+{
+	UEINTX = ~(1<<TXINI);
+ 706:	8e ef       	ldi	r24, 0xFE	; 254
+ 708:	80 93 e8 00 	sts	0x00E8, r24	; 0x8000e8 <__DATA_REGION_ORIGIN__+0x88>
+ 70c:	4b c0       	rjmp	.+150    	; 0x7a4 <__vector_11+0x2e2>
+			cdc_line_rtsdtr = wValue;
+			usb_wait_in_ready();
+			usb_send_in();
+			return;
+		}
+		if (bRequest == GET_STATUS) {
+ 70e:	81 11       	cpse	r24, r1
+ 710:	1a c0       	rjmp	.+52     	; 0x746 <__vector_11+0x284>
+
+
+// Misc functions to wait for ready and send/receive packets
+static inline void usb_wait_in_ready(void)
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+ 712:	e8 ee       	ldi	r30, 0xE8	; 232
+ 714:	f0 e0       	ldi	r31, 0x00	; 0
+ 716:	80 81       	ld	r24, Z
+ 718:	80 ff       	sbrs	r24, 0
+ 71a:	fd cf       	rjmp	.-6      	; 0x716 <__vector_11+0x254>
+		}
+		if (bRequest == GET_STATUS) {
+			usb_wait_in_ready();
+			i = 0;
+			#ifdef SUPPORT_ENDPOINT_HALT
+			if (bmRequestType == 0x82) {
+ 71c:	a2 38       	cpi	r26, 0x82	; 130
+ 71e:	51 f4       	brne	.+20     	; 0x734 <__vector_11+0x272>
+				UENUM = wIndex;
+ 720:	e9 ee       	ldi	r30, 0xE9	; 233
+ 722:	f0 e0       	ldi	r31, 0x00	; 0
+ 724:	60 83       	st	Z, r22
+				if (UECONX & (1<<STALLRQ)) i = 1;
+ 726:	80 91 eb 00 	lds	r24, 0x00EB	; 0x8000eb <__DATA_REGION_ORIGIN__+0x8b>
+			usb_send_in();
+			return;
+		}
+		if (bRequest == GET_STATUS) {
+			usb_wait_in_ready();
+			i = 0;
+ 72a:	85 fb       	bst	r24, 5
+ 72c:	88 27       	eor	r24, r24
+ 72e:	80 f9       	bld	r24, 0
+			#ifdef SUPPORT_ENDPOINT_HALT
+			if (bmRequestType == 0x82) {
+				UENUM = wIndex;
+				if (UECONX & (1<<STALLRQ)) i = 1;
+				UENUM = 0;
+ 730:	10 82       	st	Z, r1
+ 732:	01 c0       	rjmp	.+2      	; 0x736 <__vector_11+0x274>
+			usb_send_in();
+			return;
+		}
+		if (bRequest == GET_STATUS) {
+			usb_wait_in_ready();
+			i = 0;
+ 734:	80 e0       	ldi	r24, 0x00	; 0
+				UENUM = wIndex;
+				if (UECONX & (1<<STALLRQ)) i = 1;
+				UENUM = 0;
+			}
+			#endif
+			UEDATX = i;
+ 736:	e1 ef       	ldi	r30, 0xF1	; 241
+ 738:	f0 e0       	ldi	r31, 0x00	; 0
+ 73a:	80 83       	st	Z, r24
+			UEDATX = 0;
+ 73c:	10 82       	st	Z, r1
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+}
+static inline void usb_send_in(void)
+{
+	UEINTX = ~(1<<TXINI);
+ 73e:	8e ef       	ldi	r24, 0xFE	; 254
+ 740:	80 93 e8 00 	sts	0x00E8, r24	; 0x8000e8 <__DATA_REGION_ORIGIN__+0x88>
+ 744:	2f c0       	rjmp	.+94     	; 0x7a4 <__vector_11+0x2e2>
+			UEDATX = 0;
+			usb_send_in();
+			return;
+		}
+		#ifdef SUPPORT_ENDPOINT_HALT
+		if ((bRequest == CLEAR_FEATURE || bRequest == SET_FEATURE)
+ 746:	98 2f       	mov	r25, r24
+ 748:	9d 7f       	andi	r25, 0xFD	; 253
+ 74a:	91 30       	cpi	r25, 0x01	; 1
+ 74c:	21 f5       	brne	.+72     	; 0x796 <__vector_11+0x2d4>
+		  && bmRequestType == 0x02 && wValue == 0) {
+ 74e:	a2 30       	cpi	r26, 0x02	; 2
+ 750:	11 f5       	brne	.+68     	; 0x796 <__vector_11+0x2d4>
+ 752:	23 2b       	or	r18, r19
+ 754:	01 f5       	brne	.+64     	; 0x796 <__vector_11+0x2d4>
+			i = wIndex & 0x7F;
+ 756:	46 2f       	mov	r20, r22
+ 758:	4f 77       	andi	r20, 0x7F	; 127
+			if (i >= 1 && i <= MAX_ENDPOINT) {
+ 75a:	9f ef       	ldi	r25, 0xFF	; 255
+ 75c:	94 0f       	add	r25, r20
+ 75e:	94 30       	cpi	r25, 0x04	; 4
+ 760:	d0 f4       	brcc	.+52     	; 0x796 <__vector_11+0x2d4>
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+}
+static inline void usb_send_in(void)
+{
+	UEINTX = ~(1<<TXINI);
+ 762:	9e ef       	ldi	r25, 0xFE	; 254
+ 764:	90 93 e8 00 	sts	0x00E8, r25	; 0x8000e8 <__DATA_REGION_ORIGIN__+0x88>
+		if ((bRequest == CLEAR_FEATURE || bRequest == SET_FEATURE)
+		  && bmRequestType == 0x02 && wValue == 0) {
+			i = wIndex & 0x7F;
+			if (i >= 1 && i <= MAX_ENDPOINT) {
+				usb_send_in();
+				UENUM = i;
+ 768:	40 93 e9 00 	sts	0x00E9, r20	; 0x8000e9 <__DATA_REGION_ORIGIN__+0x89>
+				if (bRequest == SET_FEATURE) {
+ 76c:	83 30       	cpi	r24, 0x03	; 3
+ 76e:	21 f4       	brne	.+8      	; 0x778 <__vector_11+0x2b6>
+					UECONX = (1<<STALLRQ)|(1<<EPEN);
+ 770:	81 e2       	ldi	r24, 0x21	; 33
+ 772:	80 93 eb 00 	sts	0x00EB, r24	; 0x8000eb <__DATA_REGION_ORIGIN__+0x8b>
+ 776:	16 c0       	rjmp	.+44     	; 0x7a4 <__vector_11+0x2e2>
+				} else {
+					UECONX = (1<<STALLRQC)|(1<<RSTDT)|(1<<EPEN);
+ 778:	89 e1       	ldi	r24, 0x19	; 25
+ 77a:	80 93 eb 00 	sts	0x00EB, r24	; 0x8000eb <__DATA_REGION_ORIGIN__+0x8b>
+					UERST = (1 << i);
+ 77e:	81 e0       	ldi	r24, 0x01	; 1
+ 780:	90 e0       	ldi	r25, 0x00	; 0
+ 782:	02 c0       	rjmp	.+4      	; 0x788 <__vector_11+0x2c6>
+ 784:	88 0f       	add	r24, r24
+ 786:	99 1f       	adc	r25, r25
+ 788:	4a 95       	dec	r20
+ 78a:	e2 f7       	brpl	.-8      	; 0x784 <__vector_11+0x2c2>
+ 78c:	ea ee       	ldi	r30, 0xEA	; 234
+ 78e:	f0 e0       	ldi	r31, 0x00	; 0
+ 790:	80 83       	st	Z, r24
+					UERST = 0;
+ 792:	10 82       	st	Z, r1
+ 794:	07 c0       	rjmp	.+14     	; 0x7a4 <__vector_11+0x2e2>
+				return;
+			}
+		}
+		#endif
+        }
+	UECONX = (1<<STALLRQ) | (1<<EPEN);	// stall
+ 796:	81 e2       	ldi	r24, 0x21	; 33
+ 798:	80 93 eb 00 	sts	0x00EB, r24	; 0x8000eb <__DATA_REGION_ORIGIN__+0x8b>
+ 79c:	03 c0       	rjmp	.+6      	; 0x7a4 <__vector_11+0x2e2>
+{
+	while (!(UEINTX & (1<<TXINI))) ;
+}
+static inline void usb_send_in(void)
+{
+	UEINTX = ~(1<<TXINI);
+ 79e:	6c 93       	st	X, r22
+				for (i = n; i; i--) {
+					UEDATX = pgm_read_byte(desc_addr++);
+				}
+				len -= n;
+				usb_send_in();
+			} while (len || n == ENDPOINT0_SIZE);
+ 7a0:	21 11       	cpse	r18, r1
+ 7a2:	f6 ce       	rjmp	.-532    	; 0x590 <__vector_11+0xce>
+			}
+		}
+		#endif
+        }
+	UECONX = (1<<STALLRQ) | (1<<EPEN);	// stall
+}
+ 7a4:	ff 91       	pop	r31
+ 7a6:	ef 91       	pop	r30
+ 7a8:	df 91       	pop	r29
+ 7aa:	cf 91       	pop	r28
+ 7ac:	bf 91       	pop	r27
+ 7ae:	af 91       	pop	r26
+ 7b0:	9f 91       	pop	r25
+ 7b2:	8f 91       	pop	r24
+ 7b4:	7f 91       	pop	r23
+ 7b6:	6f 91       	pop	r22
+ 7b8:	5f 91       	pop	r21
+ 7ba:	4f 91       	pop	r20
+ 7bc:	3f 91       	pop	r19
+ 7be:	2f 91       	pop	r18
+ 7c0:	1f 91       	pop	r17
+ 7c2:	0f 91       	pop	r16
+ 7c4:	0f 90       	pop	r0
+ 7c6:	0f be       	out	0x3f, r0	; 63
+ 7c8:	0f 90       	pop	r0
+ 7ca:	1f 90       	pop	r1
+ 7cc:	18 95       	reti
+
+000007ce <moveRobot>:
+}
+
+
+uint8_t moveRobot(uint16_t central, uint16_t left, uint16_t right)
+{
+	if(central < NEGRO)
+ 7ce:	80 37       	cpi	r24, 0x70	; 112
+ 7d0:	93 40       	sbci	r25, 0x03	; 3
+ 7d2:	50 f4       	brcc	.+20     	; 0x7e8 <moveRobot+0x1a>
+/*
+ * Funcion que hace que el robot vaya hacia delante
+ */
+static inline void forward(uint8_t speedLeft, uint8_t speedRight)
+{
+	PORTD &= (~(1<<PORTD6));
+ 7d4:	5e 98       	cbi	0x0b, 6	; 11
+	PORTE &= (~(1<<PORTE6));
+ 7d6:	76 98       	cbi	0x0e, 6	; 14
+ * Funcion que configura el ciclo de trabajo del timer. Esta funcion recibe dos
+ * parametros que son los que se asignaran a la rueda izquierda y derecha.
+ */
+static inline void TMR4_PWM_Phase_Duty(uint8_t valueOCR4A, uint8_t valueOCR4D)
+{
+	OCR4A = valueOCR4A;
+ 7d8:	8d ec       	ldi	r24, 0xCD	; 205
+ 7da:	80 93 cf 00 	sts	0x00CF, r24	; 0x8000cf <__DATA_REGION_ORIGIN__+0x6f>
+	OCR4D = valueOCR4D;
+ 7de:	82 e3       	ldi	r24, 0x32	; 50
+ 7e0:	80 93 d2 00 	sts	0x00D2, r24	; 0x8000d2 <__DATA_REGION_ORIGIN__+0x72>
+	}
+	else
+	{
+		return 1;
+	}
+	return 0;
+ 7e4:	80 e0       	ldi	r24, 0x00	; 0
+ 7e6:	08 95       	ret
+{
+	if(central < NEGRO)
+	{
+		forward(SPEEP_WHEEL_LEFT,SPEEP_WHEEL_RIGHT);
+	}
+	else if (left < NEGRO)
+ 7e8:	60 37       	cpi	r22, 0x70	; 112
+ 7ea:	73 40       	sbci	r23, 0x03	; 3
+ 7ec:	50 f4       	brcc	.+20     	; 0x802 <moveRobot+0x34>
+/*
+ * Funcion que hace que el robot gire a la izquierda
+ */
+static inline void turn_left(uint8_t speedLeft, uint8_t speedRight)
+{
+	PORTD |= ((1<<PORTD6));
+ 7ee:	5e 9a       	sbi	0x0b, 6	; 11
+	PORTE &= (~(1<<PORTE6));
+ 7f0:	76 98       	cbi	0x0e, 6	; 14
+ * Funcion que configura el ciclo de trabajo del timer. Esta funcion recibe dos
+ * parametros que son los que se asignaran a la rueda izquierda y derecha.
+ */
+static inline void TMR4_PWM_Phase_Duty(uint8_t valueOCR4A, uint8_t valueOCR4D)
+{
+	OCR4A = valueOCR4A;
+ 7f2:	8d ec       	ldi	r24, 0xCD	; 205
+ 7f4:	80 93 cf 00 	sts	0x00CF, r24	; 0x8000cf <__DATA_REGION_ORIGIN__+0x6f>
+	OCR4D = valueOCR4D;
+ 7f8:	82 e3       	ldi	r24, 0x32	; 50
+ 7fa:	80 93 d2 00 	sts	0x00D2, r24	; 0x8000d2 <__DATA_REGION_ORIGIN__+0x72>
+	}
+	else
+	{
+		return 1;
+	}
+	return 0;
+ 7fe:	80 e0       	ldi	r24, 0x00	; 0
+ 800:	08 95       	ret
+	}
+	else if (left < NEGRO)
+	{
+		turn_left(SPEEP_WHEEL_LEFT,SPEEP_WHEEL_RIGHT);
+	}
+	else if (right < NEGRO)
+ 802:	40 37       	cpi	r20, 0x70	; 112
+ 804:	53 40       	sbci	r21, 0x03	; 3
+ 806:	50 f4       	brcc	.+20     	; 0x81c <moveRobot+0x4e>
+/*
+ * Funcion que hace que el robot gire a la derecha
+ */
+static inline void turn_right(uint8_t speedLeft, uint8_t speedRight)
+{
+	PORTD &= (~(1<<PORTD6));
+ 808:	5e 98       	cbi	0x0b, 6	; 11
+	PORTE |= ((1<<PORTE6));
+ 80a:	76 9a       	sbi	0x0e, 6	; 14
+ * Funcion que configura el ciclo de trabajo del timer. Esta funcion recibe dos
+ * parametros que son los que se asignaran a la rueda izquierda y derecha.
+ */
+static inline void TMR4_PWM_Phase_Duty(uint8_t valueOCR4A, uint8_t valueOCR4D)
+{
+	OCR4A = valueOCR4A;
+ 80c:	8d ec       	ldi	r24, 0xCD	; 205
+ 80e:	80 93 cf 00 	sts	0x00CF, r24	; 0x8000cf <__DATA_REGION_ORIGIN__+0x6f>
+	OCR4D = valueOCR4D;
+ 812:	82 e3       	ldi	r24, 0x32	; 50
+ 814:	80 93 d2 00 	sts	0x00D2, r24	; 0x8000d2 <__DATA_REGION_ORIGIN__+0x72>
+	}
+	else
+	{
+		return 1;
+	}
+	return 0;
+ 818:	80 e0       	ldi	r24, 0x00	; 0
+ 81a:	08 95       	ret
+	{
+		turn_right(SPEEP_WHEEL_LEFT,SPEEP_WHEEL_RIGHT);
+	}
+	else
+	{
+		return 1;
+ 81c:	81 e0       	ldi	r24, 0x01	; 1
+	}
+	return 0;
+ 81e:	08 95       	ret
+
+00000820 <_exit>:
+ 820:	f8 94       	cli
+
+00000822 <__stop_program>:
+ 822:	ff cf       	rjmp	.-2      	; 0x822 <__stop_program>
